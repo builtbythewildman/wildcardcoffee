@@ -182,6 +182,12 @@
         "settings": {
           "color_scheme": "background-1"
         }
+      },
+      "main-text-product": {
+        "type": "main-text-product",
+        "settings": {
+          "show_reviews": true
+        }
       }
     },
     "content_for_index": []

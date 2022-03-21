@@ -1,0 +1,61 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-text-product",
+      "blocks": {
+        "e590e399-ec88-4750-91b3-df35ccfd68b0": {
+          "type": "tax_notice_block",
+          "settings": {
+            "tax_notice_text": "shipping notice"
+          }
+        },
+        "9acd9574-4f77-4906-a7cf-634a00fa8ea9": {
+          "type": "shipping_notice_block",
+          "settings": {
+            "shipping_notice_text": "no shipping notice"
+          }
+        }
+      },
+      "block_order": [
+        "e590e399-ec88-4750-91b3-df35ccfd68b0",
+        "9acd9574-4f77-4906-a7cf-634a00fa8ea9"
+      ],
+      "settings": {
+        "show_reviews": true
+      }
+    },
+    "second": {
+      "type": "main-text-product",
+      "blocks": {
+        "41acdfa9-80d5-4e4a-af45-20747fb1c4a7": {
+          "type": "shipping_notice_block",
+          "settings": {
+            "shipping_notice_text": "this is your captain speaking"
+          }
+        },
+        "3a1a076e-ac5e-44a6-85eb-88efc1496d11": {
+          "type": "tax_notice_block",
+          "settings": {
+            "tax_notice_text": "this is a tax notice"
+          }
+        },
+        "4bad855d-e6c7-4033-91ca-2477bc52a93d": {
+          "type": "product_price_block",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "41acdfa9-80d5-4e4a-af45-20747fb1c4a7",
+        "3a1a076e-ac5e-44a6-85eb-88efc1496d11",
+        "4bad855d-e6c7-4033-91ca-2477bc52a93d"
+      ],
+      "settings": {
+        "show_reviews": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "second"
+  ]
+}

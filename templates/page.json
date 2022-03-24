@@ -7,26 +7,50 @@
         "padding_bottom": 28
       }
     },
-    "164810102651c58fdd": {
+    "1648104126ca2b5ab5": {
       "type": "testimonial-slider",
       "blocks": {
-        "f1027599-c5e3-48ac-8aac-2cd5f690866b": {
-          "type": "testimonial",
+        "1c0a255e-43c0-4bcc-aef7-5e1d84c97a33": {
+          "type": "testimonials",
           "settings": {
-            "text": "<p>I loved this product<\/p>",
-            "name": "Susan Johnson",
+            "text": "<p>this product is great<\/p>",
+            "name": "John Doe",
             "image": "shopify:\/\/shop_images\/farmer.png"
+          }
+        },
+        "d40da367-0f9d-4d2e-ac64-3dfe642e86c6": {
+          "type": "testimonials",
+          "settings": {
+            "text": "<p>I love this Product!!<\/p>",
+            "name": "John Doe"
+          }
+        },
+        "8c405966-f3f0-4aa2-a247-d7a0950f4f62": {
+          "type": "testimonials",
+          "settings": {
+            "text": "<p>I love this Product!!<\/p>",
+            "name": "John Doe"
+          }
+        },
+        "e0494d36-bbd6-4925-b145-970f7221e873": {
+          "type": "testimonials",
+          "settings": {
+            "text": "<p>I love this Product!!<\/p>",
+            "name": "John Doe"
           }
         }
       },
       "block_order": [
-        "f1027599-c5e3-48ac-8aac-2cd5f690866b"
+        "1c0a255e-43c0-4bcc-aef7-5e1d84c97a33",
+        "d40da367-0f9d-4d2e-ac64-3dfe642e86c6",
+        "8c405966-f3f0-4aa2-a247-d7a0950f4f62",
+        "e0494d36-bbd6-4925-b145-970f7221e873"
       ],
       "settings": {}
     }
   },
   "order": [
     "main",
-    "164810102651c58fdd"
+    "1648104126ca2b5ab5"
   ]
 }

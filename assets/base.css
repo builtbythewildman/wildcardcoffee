@@ -2863,6 +2863,7 @@ details-disclosure > details {
   }
 }
 /* testimonial slider */
+
 .slider-card {
   max-width: 350px;
   -webkit-box-shadow: 10px 7px 18px -2px rgba(0, 0, 0, 0.57);
@@ -2871,10 +2872,11 @@ details-disclosure > details {
   margin: 20px;
 }
 
-.slider-card > svg {
+.slider-card svg {
   height: 20px;
   width: auto;
 }
+
 
 .user {
   border-radius: 50%;

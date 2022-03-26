@@ -2864,27 +2864,37 @@ details-disclosure > details {
 }
 /* testimonial slider */
 
-.slider-card {
+.testimonial {
   max-width: 350px;
-  -webkit-box-shadow: 10px 7px 18px -2px rgba(0, 0, 0, 0.57);
-  box-shadow: 10px 7px 18px -2px rgba(0, 0, 0, 0.57);
   padding: 15px;
-  margin: 20px;
+  -webkit-box-shadow: 15px 20px 28px -11px rgba(0, 0, 0, 0.64);
+  box-shadow: 15px 20px 28px -11px rgba(0, 0, 0, 0.64);
+  margin: 10px 20px;
+  border-radius: 5px;
 }
 
-.slider-card svg {
+.quotes>svg {
   height: 20px;
   width: auto;
 }
 
-
-.user {
-  border-radius: 50%;
-  height: 60px;
-  width: auto;
-  margin: 15px auto;
+.testimonial-text {
+  margin: 15px;
+  font-weight: 500;
 }
 
-div.details>p.name {
-  text-align: center;
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-info>img {
+  height: 70px;
+  border-radius: 50%;
+}
+
+.user-info>.star-rating {
+  margin: 10px 0;
 }

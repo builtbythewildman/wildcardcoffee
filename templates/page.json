@@ -7,50 +7,56 @@
         "padding_bottom": 28
       }
     },
-    "1648104126ca2b5ab5": {
+    "1648284246607a6c8e": {
       "type": "testimonial-slider",
       "blocks": {
-        "1c0a255e-43c0-4bcc-aef7-5e1d84c97a33": {
+        "b7d54015-3404-46e5-83d6-1976219cf8aa": {
           "type": "testimonials",
           "settings": {
-            "text": "<p>this product is great<\/p>",
-            "name": "John Doe",
-            "image": "shopify:\/\/shop_images\/farmer.png"
+            "textarea": "Enter your customer's raving review!",
+            "star-rating": "5",
+            "name": "<p>Customers name<\/p>"
           }
         },
-        "d40da367-0f9d-4d2e-ac64-3dfe642e86c6": {
+        "15eccb57-625e-4f4b-a437-94d3e2426fd1": {
           "type": "testimonials",
           "settings": {
-            "text": "<p>I love this Product!!<\/p>",
-            "name": "John Doe"
+            "textarea": "Enter your customer's raving review!",
+            "star-rating": "5",
+            "name": "<p>Customers name<\/p>"
           }
         },
-        "8c405966-f3f0-4aa2-a247-d7a0950f4f62": {
+        "c8728d50-c5c3-4fb9-b173-afc3ef672d49": {
           "type": "testimonials",
           "settings": {
-            "text": "<p>I love this Product!!<\/p>",
-            "name": "John Doe"
+            "textarea": "Enter your customer's raving review!",
+            "star-rating": "5",
+            "name": "<p>Customers name<\/p>"
           }
         },
-        "e0494d36-bbd6-4925-b145-970f7221e873": {
+        "3882a395-44b1-41b7-a7c6-9144a39d29e8": {
           "type": "testimonials",
           "settings": {
-            "text": "<p>I love this Product!!<\/p>",
-            "name": "John Doe"
+            "textarea": "Enter your customer's raving review!",
+            "star-rating": "5",
+            "name": "<p>Customers name<\/p>"
           }
         }
       },
       "block_order": [
-        "1c0a255e-43c0-4bcc-aef7-5e1d84c97a33",
-        "d40da367-0f9d-4d2e-ac64-3dfe642e86c6",
-        "8c405966-f3f0-4aa2-a247-d7a0950f4f62",
-        "e0494d36-bbd6-4925-b145-970f7221e873"
+        "b7d54015-3404-46e5-83d6-1976219cf8aa",
+        "15eccb57-625e-4f4b-a437-94d3e2426fd1",
+        "c8728d50-c5c3-4fb9-b173-afc3ef672d49",
+        "3882a395-44b1-41b7-a7c6-9144a39d29e8"
       ],
-      "settings": {}
+      "settings": {
+        "testimonial-heading": "",
+        "colorpicker": "#e9e4e4"
+      }
     }
   },
   "order": [
     "main",
-    "1648104126ca2b5ab5"
+    "1648284246607a6c8e"
   ]
 }

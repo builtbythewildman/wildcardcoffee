@@ -1,55 +1,107 @@
-<div class="slider">
 
+<style>
+.testimonial {
+  background-color:{{section.settings.colorpicker}}
+}
+
+</style>
+<div class="testimonial-slider">
 {% for block in section.blocks %}
-    <div class="slider-card">
-      {%render 'icon-quotes'%}
-      <p>{{block.settings.text}}</p>
-      <div class="details">
-        <img class="user" src="{% if block.settings.image %}{{block.settings.image | img_url:'300x'}}{% else %}https://randomuser.me/api/portraits/men/{{ forloop.index }}1.jpg{% endif %}" alt="{{block.settings.name }} Testimonial">
-        <p class="name">{{block.settings.name}}</p>
+    <div class="testimonial">
+      <div class="quotes">
+        {% render 'icon-quotes' %}
+        <div>
+          <p class="testimonial-text">{{block.settings.textarea}}
+          </p>
+        </div>
+        <div class="user-info">
+        {% case block.settings.star-rating %}
+          {% when '5' %}
+            <div class="star-rating" alt="5/5">⭐⭐⭐⭐⭐</div>
+          {% when '4' %}
+            <div class="star-rating" alt="4/5">⭐⭐⭐⭐</div>
+          {% when '3' %}
+            <div class="star-rating" alt="3/5">⭐⭐⭐</div>
+          {% when '2' %}
+            <div class="star-rating" alt="2/5">⭐⭐</div>
+          {% when '1' %}
+            <div class="star-rating" alt="1/5">⭐</div>
+          {% when 'none' %}
+            <div style="display:none" aria-hidden="true" class="star-rating">⭐⭐⭐⭐⭐</div>
+        {% endcase %}
+          <img src="{% if block.settings.imagepicker %}{{block.settings.imagepicker | img_url: '300x'}} {% else %}https://randomuser.me/api/portraits/men/{{forloop.index}}.jpg {% endif %}" alt="Testimonial Photo">
+          <h4 class="username">{{block.settings.name}}</h4>
+        </div>
       </div>
     </div>
-
     {% endfor %}
   </div>
 
 {% schema %}
   {
     "name": "Testimonial Slider",
-    "settings": [],
+    "settings": [
+     
+       {
+         "type": "richtext",
+         "id": "testimonial-heading",
+         "label": "Enter the Testimonial Heading"
+       },
+       
+          {
+            "type": "color",
+            "id": "colorpicker",
+            "label": "Select the background color",
+            "default": "#fcfcfc"
+          }
+     
+    ],
     "blocks": [
       {
         "type": "testimonials",
-        "name": "testimonials",
+        "name": "Testimonial Slider",
         "settings": [
-          
-            {
-              "type": "richtext",
-              "id": "text",
-              "label": "Testimonial Text",
-              "default": "<p>I love this Product!!</p>"
-            },
-            {
-              "type": "text",
-              "id": "name",
-              "label": "Name",
-              "default": "John Doe"
-            },
-            
-              {
-                "type": "image_picker",
-                "id": "image",
-                "label": "Select Testimonal Image"
-              }
+          {
+            "type": "textarea",
+            "id": "textarea",
+            "label": "Testimonial Text",
+            "default": "Enter your customer's raving review!",
+            "info": "Use this text area to enter your testimonial text"
+          },
+          {
+            "type": "radio",
+            "id": "star-rating",
+            "label": "Select Star Ratings ",
+            "options": [
+              { "value": "5", "label": "5 Stars" },
+              { "value": "4", "label": "4 Stars" },
+              { "value": "3", "label": "3 Stars" },
+              { "value": "2", "label": "2 Stars" },
+              { "value": "1", "label": "1 Stars" },
+               { "value": "none", "label": "No Stars" }
+            ],
+            "default": "5"
+          },
+          {
+            "type": "image_picker",
+            "id": "imagepicker",
+            "label": "Select testimonial image "
+          },
+          {
+            "type": "richtext",
+            "id": "name",
+            "label": "Enter the customers name ",
+            "default": "<p>Customers name</p>"
+          }
         ]
       }
     ],
     
     "presets":[
       {
-        "name": "Testimonial Slider"
+         "name": "Testimonial Slider"
       }
+    
     ]
   }
-  
 {% endschema %}

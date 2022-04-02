@@ -41,23 +41,20 @@
             "show_dynamic_checkout": true
           }
         },
-        "description": {
-          "type": "description",
-          "settings": {}
-        },
         "share": {
           "type": "share",
           "settings": {
             "share_label": "Share"
           }
         },
-        "fad01f67-a580-4177-8dbf-63120b05058b": {
-          "type": "collapsible_tab",
+        "83b73687-627e-4735-9daf-f1dbae453636": {
+          "type": "coffee_info",
           "settings": {
-            "heading": "Shipping",
-            "icon": "truck",
-            "content": "<p>{{ product.metafields.my_fields.shipping.value }}<\/p>",
-            "page": ""
+            "text_taste": "{{ product.metafields.my_fields.taste.value }}",
+            "text_strength": "{{ product.metafields.my_fields.strength.value }}",
+            "text_acidity": "{{ product.metafields.my_fields.acidity.value }}",
+            "text_type": "{{ product.metafields.my_fields.type.value }}",
+            "text_origin": "{{ product.metafields.my_fields.origin.value }}"
           }
         }
       },
@@ -69,9 +66,8 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description",
         "share",
-        "fad01f67-a580-4177-8dbf-63120b05058b"
+        "83b73687-627e-4735-9daf-f1dbae453636"
       ],
       "settings": {
         "enable_sticky_info": true,

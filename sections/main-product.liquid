@@ -227,6 +227,52 @@
             {%- endif -%}
           {%- when 'custom_liquid' -%}
             {{ block.settings.custom_liquid }}
+          {%- when 'coffee_info' -%}  
+            <div class="product__accordion accordion" {{ block.shopify_attributes }}>
+              <details id="Details-{{ block.id }}-{{ section.id }}">
+                <summary>
+                  <div class="summary__title">
+                    {% render 'icon-accordion', icon: 'leaf' %}
+                    <h2 class="h4 accordion__title">
+                      Coffee Information
+                    </h2>
+                  </div>
+                  {% render 'icon-caret' %}
+                </summary>
+                <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
+                  <table class="coffee-info">
+                    <tr>
+                      <td><b>Taste</b></td>
+                      <td>{{block.settings.taste_text}}</td>
+                    </tr>
+                    <tr>
+                      <td><b>Strength</b></td>
+                      <td>
+                       {% assign strength = block.settings.strength_text | plus:0 %}
+                      {% render 'coffee-indicator', level:strength %}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><b>Acidity</b></td>
+                      <td>
+                      {% assign acidity = block.settings.acidity_text | plus:0 %}
+                      {% render 'coffee-indicator', level:acidity %}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><b>Type</b></td>
+                      <td>{{block.settings.type_text}}</td>
+                    </tr>
+                    <tr>
+                      <td><b>Origin</b></td>
+                      <td>{{block.settings.origin_text}}</td>
+                    </tr>
+                    
+                  </table>
+
+                </div>
+              </details>
+            </div>
           {%- when 'collapsible_tab' -%}
             <div class="product__accordion accordion" {{ block.shopify_attributes }}>
               <details id="Details-{{ block.id }}-{{ section.id }}">
@@ -769,6 +815,37 @@
           "id": "custom_liquid",
           "label": "t:sections.main-product.blocks.custom_liquid.settings.custom_liquid.label",
           "info": "t:sections.main-product.blocks.custom_liquid.settings.custom_liquid.info"
+        }
+      ]
+    },
+    {
+      "type": "coffee_info",
+      "name": "Coffee Info",
+      "settings": [
+        {
+          "type": "text",
+          "id": "taste_text",
+          "label": "Taste"
+        },
+        {
+          "type": "text",
+          "id": "strength_text",
+          "label": "Coffee Strength"
+        },
+        {
+          "type": "text",
+          "id": "acidity_text",
+          "label": "Acidity Level"
+        },
+        {
+          "type": "text",
+          "id": "type_text",
+          "label": "Type"
+        },
+        {
+          "type": "text",
+          "id": "origin_text",
+          "label": "Origin"
         }
       ]
     },

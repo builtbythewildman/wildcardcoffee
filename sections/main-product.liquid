@@ -227,14 +227,14 @@
             {%- endif -%}
           {%- when 'custom_liquid' -%}
             {{ block.settings.custom_liquid }}
-          {%- when 'coffee_info' -%}  
-            <div class="product__accordion accordion" {{ block.shopify_attributes }}>
+          {%- when 'coffee_info' -%}
+          <div class="product__accordion accordion" {{ block.shopify_attributes }}>
               <details id="Details-{{ block.id }}-{{ section.id }}">
                 <summary>
                   <div class="summary__title">
                     {% render 'icon-accordion', icon: 'leaf' %}
                     <h2 class="h4 accordion__title">
-                      Coffee Information
+                      Coffee Info
                     </h2>
                   </div>
                   {% render 'icon-caret' %}
@@ -243,33 +243,31 @@
                   <table class="coffee-info">
                     <tr>
                       <td><b>Taste</b></td>
-                      <td>{{block.settings.taste_text}}</td>
+                      <td>{{block.settings.text_taste}}</td>
                     </tr>
                     <tr>
                       <td><b>Strength</b></td>
                       <td>
-                       {% assign strength = block.settings.strength_text | plus:0 %}
-                      {% render 'coffee-indicator', level:strength %}
+                      {% assign strength = block.settings.text_strength | plus:0 %}
+                        {% render 'coffee-indicator', level: strength %}
                       </td>
                     </tr>
                     <tr>
                       <td><b>Acidity</b></td>
                       <td>
-                      {% assign acidity = block.settings.acidity_text | plus:0 %}
-                      {% render 'coffee-indicator', level:acidity %}
+                      {% assign acidity = block.settings.text_acidity | plus:0 %}
+                        {% render 'coffee-indicator', level: acidity %}
                       </td>
                     </tr>
                     <tr>
                       <td><b>Type</b></td>
-                      <td>{{block.settings.type_text}}</td>
+                      <td>{{block.settings.text_type}}</td>
                     </tr>
                     <tr>
                       <td><b>Origin</b></td>
-                      <td>{{block.settings.origin_text}}</td>
+                      <td>{{block.settings.text_origin}}</td>
                     </tr>
-                    
                   </table>
-
                 </div>
               </details>
             </div>
@@ -820,33 +818,33 @@
     },
     {
       "type": "coffee_info",
-      "name": "Coffee Info",
-      "settings": [
-        {
-          "type": "text",
-          "id": "taste_text",
-          "label": "Taste"
-        },
-        {
-          "type": "text",
-          "id": "strength_text",
-          "label": "Coffee Strength"
-        },
-        {
-          "type": "text",
-          "id": "acidity_text",
-          "label": "Acidity Level"
-        },
-        {
-          "type": "text",
-          "id": "type_text",
-          "label": "Type"
-        },
-        {
-          "type": "text",
-          "id": "origin_text",
-          "label": "Origin"
-        }
+      "name": "Coffee Information",
+      "settings":[
+          {
+            "type": "text",
+            "id": "text_taste",
+            "label": "Taste"
+          },
+          {
+            "type": "text",
+            "id": "text_strength",
+            "label": "Strength"
+          },
+          {
+            "type": "text",
+            "id": "text_acidity",
+            "label": "Acidity"
+          },
+          {
+            "type": "text",
+            "id": "text_type",
+            "label": "Type"
+          },
+          {
+            "type": "text",
+            "id": "text_origin",
+            "label": "Origin"
+          }
       ]
     },
     {
